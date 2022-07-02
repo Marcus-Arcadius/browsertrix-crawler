@@ -1,12 +1,15 @@
 name: Publish Docker image
 on:
-  release:
-    types: [published]
+  #release:
+  #  types: [published]
+  push:
+    branches:
+      - ci
 
 jobs:
   push_to_registries:
     name: Build x86 and ARM Images and push to Dockerhub
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - 
         name: Check out the repo
