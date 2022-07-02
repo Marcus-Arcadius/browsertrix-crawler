@@ -20,7 +20,7 @@ WORKDIR /app
 ADD requirements.txt /app/
 #RUN pip install 'uwsgi==2.0.20'
 #RUN pip install -U setuptools; pip install -r requirements.txt
-RUN pip install uwsgi; pip install -r requirements.txt
+RUN pip install 'uwsgi==2.0.20'; pip install -r requirements.txt
 
 ADD package.json /app/
 
