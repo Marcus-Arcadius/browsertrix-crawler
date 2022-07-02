@@ -18,8 +18,9 @@ ENV PROXY_HOST=localhost \
 WORKDIR /app
 
 ADD requirements.txt /app/
-RUN pip install 'uwsgi==2.0.20'
-RUN pip install -U setuptools; pip install -r requirements.txt
+#RUN pip install 'uwsgi==2.0.20'
+#RUN pip install -U setuptools; pip install -r requirements.txt
+RUN pip install -r requirements.txt
 
 ADD package.json /app/
 
